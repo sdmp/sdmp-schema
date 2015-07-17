@@ -1,0 +1,23 @@
+{
+  "name": "sdmp-schema",
+  "version": "0.9.1",
+  "description": "The core schema for SDMP, defined using JSON-schema.",
+  "main": "schema.json",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sdmp/sdmp-schemata.git"
+  },
+  "keywords": [
+    "sdmp",
+    "json-schema"
+  ],
+  "author": "saibotsivad",
+  "license": "VOL",
+  "bugs": {
+    "url": "https://github.com/sdmp/sdmp-schema/issues"
+  },
+  "homepage": "https://github.com/sdmp/sdmp-schema"
+}
