@@ -1,0 +1,11 @@
+---
+sdmp:
+  resource:
+    version: 0.9.1
+    publisher: 7a5179eecc0fe18760ba615f92603372ae3fe302860098a019e15927551fee3b
+    created: "2015-06-19T23:15:52.605Z"
+    type: relationship
+  data:
+    type: publisher
+    key: 615f92603372ae3fe302860098a019e15927551fee3b7a5179eecc0fe18760ba
+...

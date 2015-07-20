@@ -129,7 +129,8 @@
             "$ref": "#/definitions/nodeAddress"
           }
         }
-      }
+      },
+      "required": ["name","ips"]
     },
     "general": {
       "description": "Any general resource information can be stored here.",
@@ -182,7 +183,7 @@
       "type": "object",
       "properties": {
         "type": {
-          "type": { "enum": ["Buffer"] }
+          "enum": ["Buffer"]
         },
         "data": {
           "type": "array",
@@ -199,7 +200,7 @@
     "nodeAddress": {
       "description": "IPv4 or IPv6 with port included.",
       "type": "string",
-      "pattern": ".*"
+      "pattern": "^[a-z]{2}$"
     }
 
 
