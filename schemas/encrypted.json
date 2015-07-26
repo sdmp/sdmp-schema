@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "[SDMP 0.10.1](http://sdmp.github.io/) Encrypted Resource Schema",
+  "description": "Schema for encrypted resources published within the SDMP.",
+  "type": "object",
+  "properties": {
+    "encrypted": {
+      "description": "Root property which contains the encrypted data. The properties of this object must conform exactly to [JWE JSON serialization syntax](http://self-issued.info/docs/draft-ietf-jose-json-web-encryption.html#GeneralJSONSerialization). Any difference between this schema and the JWE specifications should be considered an error.",
+      "type": "object",
+      "properties": {
+        "protected": {
+          "description": "Integrity-protected shared header contents.",
+          "type": "string"
+        },
+        "unprotected": {
+          "description": "Non-integrity-protected shared header contents.",
+          "type": "object"
+        },
+        "recipients": {
+          "type": "array",
+          "items": {
+            "description": "Per-recipient information.",
+            "type": "object",
+            "properties": {
+              "header": {
+                "description": "Per-recipient unprotected header contents.",
+                "type": "object"
+              },
+              "encrypted_key": {
+                "description": "Encrypted key contents.",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "aad": {
+          "description": "Additional authenticated data contents.",
+          "type": "string"
+        },
+        "iv": {
+          "description": "Initialization vector contents.",
+          "type": "string"
+        },
+        "ciphertext": {
+          "description": "Ciphertext contents.",
+          "type": "string"
+        },
+        "tag": {
+          "description": "Authentication tag contents.",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": ["encrypted"]
+}

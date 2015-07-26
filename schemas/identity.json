@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "[SDMP 0.10.1](http://sdmp.github.io/) Identity Resource Schema",
+  "description": "Schema for the identity resources of the SDMP.",
+  "type": "object",
+  "properties": {
+    "identity": {
+      "description": "Root property which contains the public key for a new identity.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "The type of identity.",
+          "enum": ["user", "node"]
+        },
+        "expires": {
+          "description": "Timestampe in UTC when the identity key should be expired. The timestamp is ISO-8601 formatted, with granularity to the millisecond.",
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
+        },
+        "key": {
+          "description": "The public key of the identity, whose octets are [unpadded base64url](https://tools.ietf.org/html/rfc4648#section-5) encoded.",
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9_-]+$"
+        }
+      },
+      "required": ["type", "expires", "key"]
+    }
+  },
+  "required": ["identity"]
+}

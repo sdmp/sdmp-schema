@@ -1,0 +1,13 @@
+{
+  "sdmp": {
+    "version": "0.10.1",
+    "publisher": "GlvAreTo__data_truncated__aOU91A8Q",
+    "created": "2015-06-19T23:15:52.605Z",
+    "schemas": ["post"],
+    "updates": [ "vlAreGTo__data_truncated__A8QaOU91" ]
+  },
+  "post": {
+    "title": "Life is Awesome",
+    "content": "When **you** are awesome!\n\nBut seriously, it is!"
+  }
+}

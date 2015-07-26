@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "[SDMP 0.10.1](http://sdmp.github.io/) Relationship Resource Schema",
+  "description": "Schema for the relationship resources of the SDMP.",
+  "type": "object",
+  "properties": {
+    "relationship": {
+      "description": "Root property which indicates user/user and user/node relationships.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "For user-to-node, use 'host' or 'publisher', and for user-to-user, 'connection'.",
+          "enum": ["connection", "host", "publisher"]
+        },
+        "identity": {
+          "description": "The key fingerprint of the user or node being added as a relationship. This is equivalent to the SHA-512 of the other identities public key, whose octets are [unpadded base64url](https://tools.ietf.org/html/rfc4648#section-5) encoded.",
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9_-]+$"
+        }
+      }
+    }
+  },
+  "required": ["relationship"]
+}

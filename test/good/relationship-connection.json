@@ -1,0 +1,12 @@
+{
+  "sdmp": {
+    "version": "0.10.1",
+    "publisher": "GlvAreTo__data_truncated__aOU91A8Q",
+    "created": "2015-06-19T23:15:52.605Z",
+    "schemas": ["relationship"]
+  },
+  "relationship": {
+    "type": "connection",
+    "identity": "AreGlvTo__data_truncated__aOA8QU91"
+  }
+}

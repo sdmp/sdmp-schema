@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "[SDMP 0.10.1](http://sdmp.github.io/) User Information Resource Schema",
+  "description": "Schema for the user information resources of the SDMP.",
+  "type": "object",
+  "properties": {
+    "user": {
+      "description": "Root property which stores information about a user.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "A human-readable name for the user.",
+          "type": "string"
+        },
+        "about": {
+          "description": "A human-readable description of the user. Meant to differentiate between users with similar names.",
+          "type": "string"
+        }
+      },
+      "required": ["name"]
+    }
+  },
+  "required": ["user"]
+}

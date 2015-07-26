@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "[SDMP 0.10.1](http://sdmp.github.io/) Core Resource Schema",
+  "description": "Schema for the core resources of the SDMP. All resources published within the SDMP must conform to this schema.",
+  "type": "object",
+  "properties": {
+    "sdmp": {
+      "description": "Root property defining the SDMP resource.",
+      "type": "object",
+      "properties": {
+        "version": {
+          "description": "Version of SDMP used to create the resource, and which must be used to validate the resource. The property must be a valid [semver number](http://semver.org/).",
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "publisher": {
+          "description": "The [key fingerprint](TODO) of the user or node publishing the resource. This is equivalent to the SHA-512 of the public key, whose octets are [unpadded base64url](https://tools.ietf.org/html/rfc4648#section-5) encoded.",
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9_-]+$"
+        },
+        "created": {
+          "description": "Timestamp the resource was published. The time must be the local time of the publisher, translated to UTC. The timestamp is ISO-8601 formatted, with granularity to the millisecond.",
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$"
+        },
+        "updates": {
+          "description": "The resources which this resource overrides. All resources in this list must be published by the publisher of this current resource.",
+          "type": "array",
+          "items": {
+            "description": "The [resource identifier](TODO) of the resource being overridden. This is equivalent to the SHA-512 used to sign the resource, whose octets are [unpadded base64url](https://tools.ietf.org/html/rfc4648#section-5) encoded.",
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "schemas": {
+          "description": "The schemas used in this resource.",
+          "type": "array",
+          "items": {
+            "description": "Must be a valid URI which points to a valid schema.",
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": ["version", "publisher", "created"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["sdmp"]
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "[SDMP 0.10.1](http://sdmp.github.io/) Node Information Resource Schema",
+  "description": "Schema for the node information resources of the SDMP.",
+  "type": "object",
+  "properties": {
+    "node": {
+      "description": "Root property which stores information about a node.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "A human-readable name for the node.",
+          "type": "string"
+        },
+        "ips": {
+          "description": "IP and port which are used to connect to the node.",
+          "type": "array",
+          "items": {
+            "description": "The IPv4 or IPv6 address, including the port.",
+            "type": "string"
+          }
+        }
+      },
+      "required": ["name", "ips"]
+    }
+  },
+  "required": ["node"]
+}

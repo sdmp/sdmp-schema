@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "[SDMP 0.10.1](http://sdmp.github.io/) Public Post Resource Schema",
+  "description": "Schema for the public post resources of the SDMP.",
+  "type": "object",
+  "properties": {
+    "post": {
+      "description": "Root property which stores the public post data.",
+      "type": "object",
+      "properties": {
+        "title": {
+          "description": "Title of the post.",
+          "type": "string"
+        },
+        "subtitle": {
+          "description": "Subtitle of the post.",
+          "type": "string"
+        },
+        "author": {
+          "description": "Human-readable name of the post author.",
+          "type": "string"
+        },
+        "content": {
+          "description": "The [markdown](http://commonmark.org/) formatted post content.",
+          "type": "string"
+        }
+      },
+      "required": ["content"]
+    }
+  },
+  "required": ["post"]
+}

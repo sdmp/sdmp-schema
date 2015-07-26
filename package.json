@@ -1,11 +1,10 @@
 {
   "name": "sdmp-schema",
   "version": "1.0.3",
-  "description": "The core schema for SDMP 0.9.1, defined using JSON-schema.",
-  "main": "schema.json",
+  "description": "The core schemas for SDMP 0.10.1, defined using JSON-schema.",
+  "main": "index.js",
   "scripts": {
-    "test": "tape test/*.js",
-    "generate": "node generate-markdown.js"
+    "test": "tape test/*.js"
   },
   "repository": {
     "type": "git",
@@ -22,10 +21,7 @@
   },
   "homepage": "https://github.com/sdmp/sdmp-schema",
   "devDependencies": {
-    "enjoi": "^0.2.3",
-    "joi": "^6.5.0",
-    "js-yaml": "^3.3.1",
-    "json-schema-to-markdown": "^1.0.0",
+    "jsonschema": "^1.0.2",
     "tape": "^4.0.1"
   }
 }

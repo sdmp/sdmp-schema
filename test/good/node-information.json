@@ -1,0 +1,15 @@
+{
+  "sdmp": {
+    "version": "0.10.1",
+    "publisher": "AreGlvTo__data_truncated__aOA8QU91",
+    "created": "2015-06-19T23:15:52.605Z",
+    "schemas": ["nodeInformation"]
+  },
+  "node": {
+    "name": "John's always-on box",
+    "ips": [
+      "192.168.2.104:1337",
+      "[2607:f298:1:126::72c:b051]:36075"
+    ]
+  }
+}

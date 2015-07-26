@@ -1,0 +1,20 @@
+{
+  "sdmp": {
+    "version": "0.10.1",
+    "publisher": "GlvAreTo__data_truncated__aOU91A8Q",
+    "created": "2015-06-19T23:15:52.605Z",
+    "schemas": ["encrypted"]
+  },
+  "encrypted": {
+    "protected": "",
+    "unprotected": {},
+    "recipients": [{
+      "header": {},
+      "encrypted_key": ""
+    }],
+    "aad": "",
+    "iv": "",
+    "ciphertext": "",
+    "tag": ""
+  }
+}

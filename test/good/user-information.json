@@ -1,0 +1,12 @@
+{
+  "sdmp": {
+    "version": "0.10.1",
+    "publisher": "AreGlvTo__data_truncated__aOA8QU91",
+    "created": "2015-06-19T23:15:52.605Z",
+    "schemas": ["userInformation"]
+  },
+  "user": {
+    "name": "John Doe",
+    "about": "Lumberjack and he is okay."
+  }
+}
