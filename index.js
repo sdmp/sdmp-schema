@@ -1,10 +1,10 @@
 var allSchemas = {
 	encrypted: require('./schemas/encrypted.json'),
 	identity: require('./schemas/identity.json'),
-	nodeInformation: require('./schemas/node-information.json'),
+	node_information: require('./schemas/node_information.json'),
 	relationship: require('./schemas/relationship.json'),
 	resource: require('./schemas/resource.json'),
-	userInformation: require('./schemas/user-information.json'),
+	user_information: require('./schemas/user_information.json'),
 	post: require('./schemas/post.json')
 }
 

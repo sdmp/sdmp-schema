@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "[SDMP 0.10.1](http://sdmp.github.io/) Encrypted Resource Schema",
-  "description": "Schema for encrypted resources published within the SDMP.",
+  "title": "[SDMP 0.10.1](http://sdmp.github.io/) Encrypted Schema",
+  "description": "Schema for an SDMP [encrypted resource](http://sdmp.github.io/docs/resource/#encrypted).",
   "type": "object",
   "properties": {
     "encrypted": {

@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "[SDMP 0.10.1](http://sdmp.github.io/) Relationship Resource Schema",
-  "description": "Schema for the relationship resources of the SDMP.",
+  "title": "[SDMP 0.10.1](http://sdmp.github.io/) Relationship Schema",
+  "description": "Schema for an SDMP [relationship resource](http://sdmp.github.io/docs/resource/#relationship).",
   "type": "object",
   "properties": {
     "relationship": {

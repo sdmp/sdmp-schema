@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "[SDMP 0.10.1](http://sdmp.github.io/) Public Post Resource Schema",
-  "description": "Schema for the public post resources of the SDMP.",
+  "title": "[SDMP 0.10.1](http://sdmp.github.io/) Public Post Schema",
+  "description": "Schema for an SDMP [public post resource](http://sdmp.github.io/docs/resource/#post).",
   "type": "object",
   "properties": {
     "post": {
