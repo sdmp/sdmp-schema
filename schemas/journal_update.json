@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "[SDMP 0.10.1](http://sdmp.github.io/) Journal Update Schema",
+  "description": "Schema for an SDMP [journal update](http://sdmp.github.io/docs/synchronization/#journal-update) object. These are used by nodes to send journal updates to other nodes.",
+  "type": "object",
+  "properties": {
+    "data": {
+      "description": "Holds the journal update properties.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "Indicates the data type.",
+          "type": "string",
+          "pattern": "^journal$"
+        },
+        "since": {
+          "description": "This property is the [journal line number](http://sdmp.github.io/docs/journal/#journal-line-number) of the line immediately preceding the first entry in the journal entries list of this object.",
+          "type": "string"
+        },
+        "entries": {
+          "description": "An ordered list of valid [journal entries](http://sdmp.github.io/docs/journal/#journal-entries).",
+          "type": "array",
+          "items": {
+            "description": "Must be  valid [journal entries](http://sdmp.github.io/docs/journal/#journal-entries).",
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [ "type", "since", "entries" ]
+    }
+  },
+  "required": [ "data" ]
+}

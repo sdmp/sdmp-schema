@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "[SDMP 0.10.1](http://sdmp.github.io/) Resource Response Schema",
+  "description": "Schema for an SDMP [resource response](http://sdmp.github.io/docs/synchronization/#resource-response) object. These are used by nodes to send resources to other nodes.",
+  "type": "object",
+  "properties": {
+    "data": {
+      "description": "Holds the response properties.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "Indicates the response type.",
+          "type": "string",
+          "pattern": "^resource$"
+        },
+        "description": {
+          "description": "Human readable string to describe the response object.",
+          "type": "string",
+          "pattern": "^.{0,40}$"
+        },
+        "status": {
+          "description": "If the data object is in response to a [resource request](http://sdmp.github.io/docs/synchronization/#resource-request), this property must be a valid [status code](#response-status-code), which is similar to HTTP status codes in that it indicates the status of the response.",
+          "enum": [ 200, 400, 404 ]
+        },
+        "request": {
+          "description": "If the data object is in response to a [resource request](http://sdmp.github.io/docs/synchronization/#resource-request), this property must be the value of the `request.identifier`.",
+          "type": "string",
+          "pattern": "^.{0,40}$"
+        },
+        "content": {
+          "description": "If the object contains a valid [resource object](http://sdmp.github.io/docs/resource/), this object is the complete [SDMP container](http://sdmp.github.io/docs/container/). In all other cases, this property must not be set.",
+          "type": "object"
+        }
+      },
+      "required": [ "type" ]
+    }
+  },
+  "required": [ "data" ]
+}

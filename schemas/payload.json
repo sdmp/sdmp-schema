@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "[SDMP 0.10.1](http://sdmp.github.io/) Payload Schema",
+  "description": "Schema required for all payloads within the SDMP.",
+  "type": "object",
+  "properties": {
+    "sdmp": {
+      "description": "Root property defining the SDMP payload.",
+      "type": "object",
+      "properties": {
+        "version": {
+          "description": "Exact version of SDMP used to create the payload, and which must be used to validate the resource. The property must be a valid [semver number](http://semver.org/).",
+          "type": "string"
+        },
+        "schemas": {
+          "description": "The schemas used in this resource.",
+          "type": "array",
+          "items": {
+            "description": "Must be a valid SDMP resource URI which points to a valid schema, or one of the following reserved strings, which are SDMP core schemas:\n\n* `encrypted`\n* `identity`\n* `node_information`\n* `post`\n* `relationship`\n* `resource`\n* `user_information`",
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": ["version", "schemas"]
+    }
+  },
+  "required": ["sdmp"]
+}

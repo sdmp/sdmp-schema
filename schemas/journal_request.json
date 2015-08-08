@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "[SDMP 0.10.1](http://sdmp.github.io/) Journal Request Schema",
+  "description": "Schema for an SDMP [journal request](http://sdmp.github.io/docs/synchronization/#journal-request) object. These are used by nodes to request journal updates from other nodes.",
+  "type": "object",
+  "properties": {
+    "request": {
+      "description": "Holds the request properties.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "Indicates the request type.",
+          "type": "string",
+          "pattern": "^journal$"
+        },
+        "since": {
+          "description": "The last known [journal line number](http://sdmp.github.io/docs/journal/#journal-line-number) of the requesting node.",
+          "type": "string"
+        },
+        "limit": {
+          "description": "Maximum number of journal line number entries to include in the response.",
+          "type": "number"
+        }
+      },
+      "required": [ "type", "since" ]
+    }
+  },
+  "required": ["request"]
+}
