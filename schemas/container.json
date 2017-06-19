@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "[SDMP 0.10.1](http://sdmp.github.io/) Container Payload Schema",
+  "title": "[SDMP 0.10.4](http://sdmp.github.io/) Container Payload Schema",
   "description": "Schema for the SDMP [container payload object](http://sdmp.github.io/docs/container/) object.",
   "type": "object",
   "properties": {
@@ -36,5 +36,5 @@
       "required": [ "version", "publisher", "created", "schemas" ]
     }
   },
-  "required": ["sdmp"]
+  "required": [ "sdmp" ]
 }

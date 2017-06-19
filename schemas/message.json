@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "[SDMP 0.10.4](http://sdmp.github.io/) Message Schema",
+  "description": "Schema for an SDMP [message resource](http://sdmp.github.io/docs/resource/#post). This resource **must** be inside an encrypted container.",
+  "type": "object",
+  "properties": {
+    "message": {
+      "description": "The message content, which *must* be formatted as [markdown](http://commonmark.org/).",
+      "type": "string"
+    }
+  },
+  "required": [ "message" ]
+}

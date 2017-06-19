@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "[SDMP 0.10.1](http://sdmp.github.io/) Resource Request Schema",
+  "title": "[SDMP 0.10.4](http://sdmp.github.io/) Resource Request Schema",
   "description": "Schema for an SDMP [resource request](http://sdmp.github.io/docs/synchronization/#resource-request) objects. These are used by nodes to request resources from other nodes.",
   "type": "object",
   "properties": {
@@ -30,5 +30,5 @@
       "required": [ "type", "identifier", "author", "resource" ]
     }
   },
-  "required": ["request"]
+  "required": [ "request" ]
 }

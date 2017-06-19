@@ -1,6 +1,7 @@
 # sdmp-schema
 
-The core schema for [SDMP 0.10.1](http://sdmp.github.io), which uses [JSON-schema](http://json-schema.org/).
+The core schema for [SDMP 0.10.4](http://sdmp.github.io), which uses
+[JSON-schema](http://json-schema.org/) definitions.
 
 # license
 

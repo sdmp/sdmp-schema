@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "[SDMP 0.10.4](http://sdmp.github.io/) Message Receipt Schema",
+  "description": "Schema for an SDMP [message receipt resource](http://sdmp.github.io/docs/resource/#post). This resource **must** be inside an encrypted container.",
+  "type": "object",
+  "properties": {
+    "receipt": {
+      "description": "The [resource identifier](http://sdmp.github.io/docs/resource/#resource-identifier) of the [message](http://sdmp.github.io/docs/resource/#message) received.",
+      "type": "string"
+    }
+  },
+  "required": [ "receipt" ]
+}

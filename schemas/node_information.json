@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "[SDMP 0.10.1](http://sdmp.github.io/) Node Information Schema",
+  "title": "[SDMP 0.10.4](http://sdmp.github.io/) Node Information Schema",
   "description": "Schema for an SDMP [node information resource](http://sdmp.github.io/docs/resource/#node-information).",
   "type": "object",
   "properties": {
@@ -21,8 +21,8 @@
           }
         }
       },
-      "required": ["name", "ips"]
+      "required": [ "name", "ips" ]
     }
   },
-  "required": ["node"]
+  "required": [ "node" ]
 }

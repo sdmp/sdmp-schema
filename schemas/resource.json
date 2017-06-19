@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "[SDMP 0.10.1](http://sdmp.github.io/) Resource Schema",
+  "title": "[SDMP 0.10.4](http://sdmp.github.io/) Resource Schema",
   "description": "Schema for SDMP resource objects. All resources published within the SDMP must conform to this schema.",
   "type": "object",
   "properties": {
@@ -22,5 +22,5 @@
       }
     }
   },
-  "required": ["sdmp"]
+  "required": [ "sdmp" ]
 }

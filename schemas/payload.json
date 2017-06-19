@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "[SDMP 0.10.1](http://sdmp.github.io/) Payload Schema",
+  "title": "[SDMP 0.10.4](http://sdmp.github.io/) Payload Schema",
   "description": "Schema required for all payloads within the SDMP.",
   "type": "object",
   "properties": {
@@ -23,8 +23,8 @@
           "uniqueItems": true
         }
       },
-      "required": ["version", "schemas"]
+      "required": [ "version", "schemas" ]
     }
   },
-  "required": ["sdmp"]
+  "required": [ "sdmp" ]
 }

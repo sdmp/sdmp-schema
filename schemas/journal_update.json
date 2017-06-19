@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "[SDMP 0.10.1](http://sdmp.github.io/) Journal Update Schema",
+  "title": "[SDMP 0.10.4](http://sdmp.github.io/) Journal Update Schema",
   "description": "Schema for an SDMP [journal update](http://sdmp.github.io/docs/synchronization/#journal-update) object. These are used by nodes to send journal updates to other nodes.",
   "type": "object",
   "properties": {

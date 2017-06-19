@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "[SDMP 0.10.1](http://sdmp.github.io/) User Information Schema",
+  "title": "[SDMP 0.10.4](http://sdmp.github.io/) User Information Schema",
   "description": "Schema for an SDMP [user information resource](http://sdmp.github.io/docs/resource/#user-information).",
   "type": "object",
   "properties": {
@@ -17,8 +17,8 @@
           "type": "string"
         }
       },
-      "required": ["name"]
+      "required": [ "name" ]
     }
   },
-  "required": ["user"]
+  "required": [ "user" ]
 }
